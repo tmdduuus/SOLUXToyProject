@@ -19,12 +19,12 @@ const MongoClient = require('mongodb').MongoClient;
 // 연결되면 app.listen 코드 실행
 // 따라서 database 접속 완료하면 내부 코드 실행
 var db;
-MongoClient.connect('mongodb+srv://meli:soluxtoyprojectbackend@solux.sunzesk.mongodb.net/?retryWrites=true&w=majority', function(error, client){
+MongoClient.connect('mongodb+srv://soluxweb:soluxweb1@soluxweb.nzkvapw.mongodb.net/?retryWrites=true&w=majority', function(error, client){
     if(error){
         return console.log(error)
     }
 
-    db = client.db('solux');
+    db = client.db('soluxweb');
 
     // listen 함수를 통해 컴퓨터에서 서버 열기 ㄱㄴ
     app.listen(8080, function(){
