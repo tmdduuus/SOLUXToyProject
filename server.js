@@ -25,9 +25,9 @@ app.post('/add', function(req, res){
 
 });
 
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
-})
+//app.get('/', function(req, res){
+//    res.sendFile(__dirname + '/index.html');
+//})
 
 app.get('/writeappli', function(req, res){ // 지원서 작성 페이지
     res.sendFile(__dirname + '/writeappli.html');
