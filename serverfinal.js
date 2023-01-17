@@ -69,13 +69,12 @@ app.post('/login', passport.authenticate('local', {
     res.redirect('/');
 });
 
-// 마이페이지 접속, 미들웨어 사용하기
+// 마이페이지 접속
 app.get('/mypage', checklogin, function(req, res){
-    // 마이페이지 접속 시 요청.user에 사용자의 정보가 담긴다
     db.collection('application').findOne({_id : req.params.id}, function(에러, 결과){
         console.log(결과);
         res.render('mypage.ejs', {member : req.user, data : 결과});
-    }); // 저장된 모든 데이터를 가져옴
+    });
 });
 
 // 로그인 했는지 판단하는 함수, 미들웨어 만들기
