@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>회원가입 페이지</title>
+    <link href="/public/signup.css" rel="stylesheet" />
+    <script src="/public/signup.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="/public/solux_logo.jpg" alt="My Image" width="100" height="60">
+
+        <form action="/register" method="POST">
+        
+            <div class="email">
+                <div class = "nametitle" >이메일</div>
+                <input id="email" type="text" placeholder="이메일을 입력해 주세요." name="email">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="password">
+                <div class = "nametitle" >비밀번호</div>
+                <input id="password" type="password" placeholder="비밀번호를 입력해 주세요." name = "password">
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <div class="passwordCheck">
+                <div class = "nametitle" >비밀번호 확인</div>
+                <input id="passwordCheck" type="password" placeholder="비밀번호를 다시 입력해 주세요.">
+                <div id="passwordCheckError" class="error"></div>
+            </div>
+
+            <div class="name">
+                <div class = "nametitle" >이름</div>
+                <input id="name"  type="text" placeholder="이름을 입력해 주세요." name = "personname">
+                <div id="nameError" class="error"></div>
+            </div>
+
+
+
+            <!--
+            <div class="date">
+                <div class = "nametitle" >생년월일</div>
+                <form>
+                    <div><input type="date" name = "birth"></div>
+                </form>
+            </div>
+
+            <div class="gender">
+                <div class = "nametitle" >성별</div>
+                <input id="gender_man" type="radio" name="gender">남성  
+                <input id="gender_woman" type="radio" name="gender">여성
+                <div id="genderError" class="error"></div>
+            </div>
+
+            <div class="phone">
+                <div class = "nametitle" >전화번호</div>
+                <div>
+                <input id="phone1" type="text" size="1" maxlength="3" oninput="changePhone1()" name="phone1"> -
+                <input id="phone2" type="text" size="3" maxlength="4" oninput="changePhone2()" name="phone2"> -
+                <input id="phone3" type="text" size="3" maxlength="4" oninput="changePhone3()" name="phone3">
+                </div>
+            </div>
+            -->
+            
+
+
+            <div class="date">
+                <div class = "nametitle" >생년월일</div>
+                <input type="date" name = "birth">
+            </div>
+
+            <div class="gender">
+                <div class = "nametitle" >성별</div>
+                <input id="gender" type="text" name="gender">
+                <div id="genderError" class="error"></div>
+            </div>
+
+            <div class="phone">
+                <div class = "nametitle" >전화번호</div>
+                <div>
+                <input id="phone1" type="text" size="1" maxlength="3" name="phone1"> -
+                <input id="phone2" type="text" size="3" maxlength="4" name="phone2"> -
+                <input id="phone3" type="text" size="3" maxlength="4" name="phone3">
+                </div>
+            </div>
+
+            <div class="line">
+                <hr>
+            </div>
+            
+            <div class="signUp">
+                <!--<button id="signUpButton" onclick="signUpCheck()" type ="submit">가입하기</button>-->
+                <button id="signUpButton" type ="submit">가입하기</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>
