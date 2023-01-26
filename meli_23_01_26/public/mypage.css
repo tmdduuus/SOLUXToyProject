@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'sans-serif';
+    margin: 0px;
+    font-family: 'Noto Sans KR', 'sans-serif';
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+title{
+    font-size: 25px;
+    font-weight: 200;
+}
+
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+img{
+    margin-left: 43%;
+    margin-bottom: 15px;
+}
+
+html {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu_card{
+    text-align: center;
+    width: 1000px;
+    height: 70px;
+    margin: 70px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+}
+
+.card{
+    width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+}
+
+.row{
+    font-size: 18px;
+    font-weight: 200;
+    text-align: left;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    width: 100%;
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.left {
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.right {
+    width: 70%;
+    float: right;
+    box-sizing: border-box;
+}
+
+.infoimg{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+}
+.buttonimg{
+    margin-top: 5px;
+    margin-left: 80px;
+    background-color: rgba(130, 141, 241, 0.866);
+    color:#fffdfd;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border:none;
+}
+
+
+.infoname, .infosex,.infoid, .infoemail, .infodate{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 20px;
+    border-color: #b1b1b1;
+    margin: 10px;
+    border: 1px solid rgb(209, 209, 209);
+
+}
+.card-body{
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+h5{
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block;
+    padding-top: 22px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h5:hover{
+    color:rgba(130, 141, 241, 0.866)
+}
+
+.mypagetop{
+      text-align: right; 
+
+}
+
+.mypagebox{
+    border: 3px solid;
+    border-radius: 3px;
+    width : 450px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.buttongroup{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.button{
+    background-color: rgba(130, 141, 241, 0.866);
+    color:#fffdfd;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border:none;
+
+}
+
+
+a{
+    margin: 10px;
+}
