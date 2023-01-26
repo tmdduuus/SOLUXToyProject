@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>로그인</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href="/public/login.css">
+    </head>
+
+    <body>
+        <div class = "login">
+            <img src="/public/solux_logo.jpg" alt="My Image" width="75" height="50">
+            <form action="/login" method="POST">
+                <input type = "text" name ="email" class ="text-field" placeholder="아이디">
+                <input type = "text" name = "password" class="text-field" placeholder="비밀번호">
+                <input type = "submit" value="로그인" class="submit">
+            </form>
+        </div>
+
+        <div class = "guess">
+            <!-- <a href="#">비밀번호 찾기</a> -->
+            <a href = "/signup">회원가입</a>
+        </div>
+    </body>
+</html>
