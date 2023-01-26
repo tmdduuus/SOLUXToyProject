@@ -41,7 +41,8 @@ h5:hover{
 }
 .card{
     width: 1000px;
-    height: 600px;
+    min-height: 600px;
+    max-height: 95%;
     margin: 50px auto;
     box-shadow: 3px 3px 50px #e6e6e6;
     border-radius: 20px;
@@ -49,7 +50,17 @@ h5:hover{
 }
 .cardA{
     width: 1000px;
-    height: 1500px;
+    min-height: 1500px;
+    max-height: 95%;
+    margin: 50px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+}
+.card_A{
+    width: 1000px;
+    min-height: 550px;
+    max-height: 95%;
     margin: 50px auto;
     box-shadow: 3px 3px 50px #e6e6e6;
     border-radius: 20px;
@@ -264,6 +275,10 @@ ul.number{
     text-align: center;
     padding: 30px;
 }
+.card_A .card-header{
+    text-align: center;
+    padding: 30px;
+}
 
 .card-view{
     text-align: center;
@@ -295,6 +310,11 @@ ul.number{
 
 .card-view .contents{
     padding: 20px;
+}
+
+.content{
+    padding: 10px;
+    padding-left:35px
 }
 
 .card-view .delete_btn{
