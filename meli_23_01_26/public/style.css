@@ -1,0 +1,323 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+head{
+    display: none;
+}
+body{
+    display: block;
+}
+img{
+    display: block;
+    padding-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h5{
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block;
+    padding-top: 22px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+h5:hover{
+    color:rgba(130, 141, 241, 0.866)
+}
+
+.menu_card{
+    text-align: center;
+    width: 1000px;
+    height: 70px;
+    margin: 70px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+}
+.card{
+    width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+}
+.cardA{
+    width: 1000px;
+    height: 1500px;
+    margin: 50px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+}
+.card-header h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 3px 3px 50px rgba(136, 250, 212, 0.722);
+}
+
+.card-body{
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body input[type="search"]{
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius:  10px;
+    width: 300px;
+    font-size: 16px;
+    box-shadow: 0 5px 10px rgb(186, 184, 184)
+}
+
+.card-body a.search{
+    background-color: rgba(136, 250, 212, 0.722);
+    font-weight: 540;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: 0 5px 10px rgb(186, 184, 184)
+}
+
+.card-body div{
+    margin-top: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.card-body div div{
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: inline-block;
+    border: none;
+    margin: 0;
+}
+
+.card-body .top .title{
+    text-align: center;
+    width: 50%;
+}
+
+.card-body .top .num, .name, .count{
+    text-align: center;
+    width: 5%;
+}
+
+.card-body .top .date{
+    text-align: center;
+    width: 10%;
+}
+
+.card-body div .title{
+    width: 50%;
+    padding-left: 40px;
+    text-align: left;
+}
+.card-body .top{
+    border-bottom: 1px solid #999;
+    background-color: rgba(136, 250, 212, 0.722);
+    font-weight: 600;
+    border-radius: 10px;
+}
+.card-body div .num ,.name, .count{
+    width: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-body div .date{
+    width: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul.number{
+    padding: 10px;
+    text-align: center;
+}
+
+.number li{
+    list-style: none;
+    display: inline-block;
+}
+
+.number li a{
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    margin: 3px;
+    margin-top: 20px;
+    box-shadow: 0 5px 10px rgb(186, 184, 184);
+}
+
+.number li a:hover{background-color:#58c2e9b3}
+
+.btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.btn a{
+    background-color: rgba(140, 151, 251, 0.671);
+    font-weight: 540;
+    line-height: 90px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: 0 5px 10px rgb(186, 184, 184);
+}
+
+.card .card-header{
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 3px 3px 50px rgba(136, 250, 212, 0.722);
+}
+
+.card-write, .card-apply{
+    padding: 20px;
+}
+
+.card-write input, textarea{
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #e6e6e6;
+}
+
+.card-write .myinfo input[type="text"]{
+    margin-right:50px;
+}
+
+.card-write .title-w input[type="text"]{
+    margin-top:20px;
+    margin-bottom:20px;
+    width: 85%;
+}
+
+.card-write .msg textarea{
+    min-width: 85%;
+    max-width:85%;
+    height: 200px;
+    box-shadow: inset 3px 3px 10px #e6e6e6;
+    vertical-align: top;
+}
+
+.card-write input[type="file"]{
+    border:none;
+    box-shadow: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+/*.card-apply input, textarea{
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #e6e6e6;
+}*/
+
+
+.card-apply textarea{
+    vertical-align: top;
+    min-width: 90%;
+    max-width:90%;
+    height: 200px;
+    margin-left: 28px;
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #e6e6e6;
+    box-shadow: inset 3px 3px 10px #e6e6e6;
+
+}
+.card-apply div{
+    margin: 10px;
+    margin-bottom:40px;
+}
+.cardA .card-header{
+    text-align: center;
+    padding: 30px;
+}
+
+.card-view{
+    text-align: center;
+    padding: 30px;
+}
+
+.card-view .info{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.card-view .info dl, dt, dd{
+    display:inline-block;
+}
+.card-view .info dt, dl{
+    margin-left: 5px;
+}
+.card-view .info dd, dl{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.card-view .info dt{
+    color: #999;
+}
+
+.card-view .contents{
+    padding: 20px;
+}
+
+.card-view .delete_btn{
+    border: none;
+    position: absolute;
+    right: 110px;
+    bottom: 45px;
+    background-color: rgba(140, 151, 251, 0.671);
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 5px 10px rgb(186, 184, 184);
+}
+.cardA .btn22{
+    border: none;
+    position: absolute;
+    right: 460px;
+    bottom: 45px;
+    background-color: rgba(140, 151, 251, 0.671);
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 5px 10px rgb(186, 184, 184);
+}
