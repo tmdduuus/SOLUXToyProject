@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'sans-serif';
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 11px;
+}
+
+img{
+    margin-left: 45%;
+
+    margin-bottom: 10px;
+}
+
+html {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    width: 45%;
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+    background-color: #ffffff;;
+}
+
+input{
+    border: 1px solid rgba(24, 24, 24, 0.201);
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.wrapper {
+    padding: 10px;
+}
+
+div {
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.nametitle{
+    font-size:15px;
+    display: block;
+}
+
+input{
+    box-shadow: 3px 3px 10px #e6e6e6;
+}
+.email input {
+    width: 100%;
+}
+
+
+.name input {
+    width: 100%;
+}
+
+.password input {
+    width: 100%;
+}
+
+.passwordCheck input {
+    width: 100%;
+}
+
+
+#phone1 {
+    width: 18%;
+}
+
+#phone2 {
+    width: 30%;
+}
+
+#phone3 {
+    width: 30%;
+}
+
+.gender {
+    text-align:left;
+}
+
+.signUp button {
+    width: 100%;
+    cursor:pointer;
+    /*background-color: #bcfaf9;
+    border: 1px solid #bcfaf9;*/
+}
+
+#gender_man{
+    font-size:13px;
+}
+
+#gender_woman{
+    font-size:13px;
+}
+
+button{
+    height: 35px;
+    background-color:rgba(202, 206, 243, 0.671);
+    border:none;
+    color:#272727;
+    font-size:15px; 
+}
+
+.error{
+    font-size: 1px;
+    height: 20px;
+    color:red;
+    font-weight: 700;
+}
+
+.line{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
