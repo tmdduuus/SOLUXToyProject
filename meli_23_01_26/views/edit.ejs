@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>수정 페이지</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <a href="/board"><img src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+    <div class="menu_card">
+        <h5><a href=/mypage title="myPage">마이페이지</a></h5>
+        <h5><a href=/board title="community">커뮤니티</a></h5>
+        <h5><a href=/apply title="apply">지원서 작성</a></h5>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1>글 수정하기</h1>
+        </div>
+        
+        <form action="/edit?_method=PUT" method="POST">
+            <div class="card-write form-group">
+                <div class="myinfo">
+                    이름<input type="text" value="<%= post.nickname %>" placeholder="눈송이" class="form-control" name="nickname">
+                    작성일<input type="date" value="<%= post.writtendate %>" class="form-control" name="writtendate">
+                </div>
+                <div class="title-w">
+                    제목<input type="text" value="<%= post.title %>" placeholder="제목을 입력하세요." class="form-control" name="title">
+                    <input type="text" value="<%= post._id %>" name="id" style="display: none;"> <!--눈에 안보이는 비밀 input-->
+                </div>
+                <div class="msg">
+                    내용<textarea placeholder="내용을 입력하세요." class="form-control" name="writebody"></textarea>
+                    <input type="file">
+                </div>
+            </div>
+            <div class="btn">
+                <a href="" onclick="alert('수정되었습니다')"><button type="submit">수정</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
