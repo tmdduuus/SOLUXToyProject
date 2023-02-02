@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>마이페이지</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href="/public/mypage.css">
+    </head>
+
+    <body>
+        <a href="/mypage"><img src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+        <div class="menu_card">
+            <h5><a href=/mypage title="myPage">마이페이지</a></h5>
+            <h5><a href=/board title="community">커뮤니티</a></h5>
+            <h5><a href=/apply title="apply">지원서 작성</a></h5>
+        </div>
+
+    
+        
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="left">
+                        <form action="/upload/1?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                            <img class = "infoimg" src="/public/info01.png" alt="My Image" width="150" height="150">
+                            <button type="submit">사진 변경</button>
+                        </form>
+                        <form action="/upload/2?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                            <img class = "infoimg" src="/public/info02.png" alt="My Image" width="150" height="150">
+                            <button type="submit">사진 변경</button>
+                        </form>
+                        <form action="/upload/3?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                            <img class = "infoimg" src="/public/info03.png" alt="My Image" width="150" height="150">
+                            <button type="submit">사진 변경</button>
+                        </form>
+                        <form action="/upload/4?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                            <img class = "infoimg" src="/public/info04.png" alt="My Image" width="150" height="150">
+                            <button type="submit">사진 변경</button>
+                        </form>
+                    </div>
+
+                    
+                </div>
+
+
+                
+            </div>
+        </div>
+
+    </body>
+</html>

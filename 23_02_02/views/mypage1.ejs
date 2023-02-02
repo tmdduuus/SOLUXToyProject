@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>마이페이지</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href="mypage.css">
+        <script src="mypage.js"></script>
+    </head>
+
+    <body>
+        <a href="board.html"><img class ="logo"src="solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px>
+        </a> 
+        <div class="menu_card">
+            <h5><a href=myPage_url title="myPage">마이페이지</a></h5>
+            <h5><a href=board.html title="community">커뮤니티</a></h5>
+            <h5><a href=apply.html title="apply">지원서 작성</a></h5>
+        </div>
+
+    
+        
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="left">
+                        <img  src="info01.png"  id = "infoimg"alt="My Image" width="150" height="150">
+                        <button class= "buttonimg" onclick="changePic(0);">	&lt;- </button>
+                        <button class= "buttonimg" onclick="changePic(1);"> -&gt; </button>
+                    </div>
+
+                    <div class="right">
+                       <div class="infoname"> 이름: </div>
+                       <div class="infosex"> 성별: </div>
+                       <div class="infoid"> 아이디: </div>
+                       <div class="infoemail">이메일: </div>
+                       <div class="infodate"> 생년월일: </div>
+                    </div>
+                </div>
+
+
+                <div class= "buttongroup">
+                    <button class= "button">회원 정보 수정</button>
+                    <button class= "button">지원서 보기</button>
+                    <button class= "button">작성글 보기</button>
+                    <button class= "button">작성 댓글 보기</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

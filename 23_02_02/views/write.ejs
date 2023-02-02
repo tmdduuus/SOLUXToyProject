@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기 페이지</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <a href="/mypage"><img src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+    <div class="menu_card">
+        <h5><a href=/mypage title="myPage">마이페이지</a></h5>
+        <h5><a href=/board title="community">커뮤니티</a></h5>
+        <h5><a href=/apply title="apply">지원서 작성</a></h5>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1>글 작성하기</h1>
+        </div>
+        
+        <form action="/addcommu" method="POST">
+            <div class="card-write form-group">
+                <div class="myinfo">
+                    이름<input type="text" placeholder="눈송이" class="form-control" name="nickname">
+                    작성일<input type="date" class="form-control" name="writtendate">
+                </div>
+                <div class="title-w">
+                    제목<input type="text" placeholder="제목을 입력하세요." class="form-control" name="title">
+                </div>
+                <div class="msg">
+                    내용<textarea placeholder="내용을 입력하세요." class="form-control" name="writebody"></textarea>
+                    <!-- <input type="file"> -->
+                </div>
+            </div>
+            <div class="btn">
+                <a href="/board" onclick="alert('등록되었습니다')"><button type="submit" style="background:none; border:none; font-size:1em;">등록</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
