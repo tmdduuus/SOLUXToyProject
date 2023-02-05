@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>마이페이지</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href="/public/mypage.css">
+        <script src="/public/mypage.js"></script>
+    </head>
+
+    <body>
+        <a href="/board"><img class ="logo"src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+        <div class="menu_card">
+            <h5><a href="/mypage" title="myPage">마이페이지</a></h5>
+            <h5><a href="/board" title="community">커뮤니티</a></h5>
+            <h5><a href="/apply" title="apply">지원서 작성</a></h5>
+        </div>
+
+    
+        
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="left">
+                        <img  src="/public/info01.png"  id = "infoimg"alt="My Image" width="150" height="150">
+                        <button class= "buttonimg" onclick="changePic(0);">	&lt;- </button>
+                        <button class= "buttonimg" onclick="changePic(1);"> -&gt; </button>
+
+
+
+                        <!-- <form method="POST" action="/upload" enctype="multipart/form-data"> -->
+                            <!--enctype에서 application/x-www-form-urlencoded은 서버로 폼 데이터 전송하는 방식,
+                                base64라는 인코딩 형식으로 인코딩되어 전달된다, 용량이 1.3배 증가
+                                multipart/form-data는 인코딩하지말고 그대로 전송하는 방식,
+                                일반 파일 업로드시엔 보통 이렇게 채워넣음-->
+                            <!-- <input type="file" name="profile">
+                            <button type="submit">전송</button>
+                        </form> -->
+
+
+
+                    </div>
+
+                    <div class="right">
+                       <div class="infoname"> 이름: <%= member.personname %></div>
+                       <div class="infosex"> 성별: <%= member.gender %></div>
+                       <!-- <div class="infoid"> 아이디: </div> -->
+                       <div class="infoemail">이메일: <%= member.email %></div>
+                       <div class="infodate"> 생년월일: <%= member.birth %></div>
+                    </div>
+                </div>
+
+
+                <div class= "buttongroup">
+                    <button class= "button"><a href="/signupedit/<%= member.email %>">회원 정보 수정</a></button>
+                    <button class= "button"><a href="/viewappli/<%= member.email %>">지원서 보기</a></button>
+                    <!-- <button class= "button">작성글 보기</button> -->
+                    <!-- <button class= "button">작성 댓글 보기</button> -->
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
