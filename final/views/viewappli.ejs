@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>지원서 페이지</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <a href="/board"><img src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+    <div class="menu_card">
+        <h5><a href=/mypage title="myPage">마이페이지</a></h5>
+        <h5><a href=/board title="community">커뮤니티</a></h5>
+        <h5><a href=/apply title="apply">지원서 작성</a></h5>
+    </div>
+    <div class="cardA">
+        <div class="card-header">
+            <h1>지원서 보기</h1>
+        </div>
+        <form action="/editappli?_method=PUT" method="POST">
+            <div class="card-apply">
+                <div class="form-group">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. 지원동기와 입사 후 이루고 싶은 목표를 기술하십시오. <br><br>
+                <%= data.application1 %>
+            </div>
+                <div class="form-group">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. 본인의 협업 경험에 대해 기술하십시오. <br><br>
+                <%= data.application2 %>
+            </div>
+                <div class="form-group">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 최근 사회적 이슈 중 중요하다고 생각되는 한가지를 선택하고 이에 관한 자신의 견해를 기술하십시오.<br><br>
+                <%= data.application3 %>
+            </div>
+                <div class="form-group">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. 지원한 파트 관련 본인이 갖고 있는 전문지식 및 경험을 기술하십시오.<br><br>
+                <%= data.application4 %>
+            </div>
+                </div>
+            <div class="btn22">
+                <a href="/mypage">마이페이지</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
