@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>로그인</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href="/public/login.css">
+    </head>
+
+    <body>
+        <div class = "login">
+            <a href="/board"><img src="/public/solux_logo.jpg" alt="My Image" width="90" height="60"></a>
+            <form action="/login" method="POST">
+                <input type = "text" name ="email" class ="text-field" placeholder="아이디">
+                <input type = "password" name = "password" class="text-field" placeholder="비밀번호">
+                <!-- <input type = "submit" value="로그인" class="submit"> -->
+                <!-- <button type="button" class= "submit" onClick="location.href='/mypage'">로그인</button> -->
+                <button type="submit" class= "submit">로그인</button>
+            </form>
+        </div>
+
+        <div class = "guess">
+            <!-- <h5 class="one"><a href="#">비밀번호 찾기</a></h5> -->
+            <h5><a href = "/signup">회원가입</a></h5>
+        </div>
+    </body>
+</html>
