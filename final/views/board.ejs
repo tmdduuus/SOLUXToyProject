@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>커뮤니티 페이지</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <a href="/board"><img src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+
+
+    <div class="menu_card">
+        <h5><a href="/mypage" title="myPage">마이페이지</a></h5>
+        <h5><a href="/board" title="community">커뮤니티</a></h5>
+        <h5><a href="/apply" title="apply">지원서 작성</a></h5>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="container input-group">
+                <input type="search" class="form-control" placeholder="검색어를 입력하세요." id="search-input">
+                <button class="input-group-append" id="search" style="background:none; border:none; font-size:1em;"><a class="search">검색</a></button>
+            </div>
+
+
+
+            <script>
+                $('#search').click(function(){
+                  // 현재 페이지 url 바꾸는 법 (실은 GET 요청이랑 같다)
+                  var inputval = $('#search-input').val() // <input>에 유저가 입력한 값
+                  window.location.replace('/search?value=' + inputval);
+                  // 버튼 누르면 /search로 이동함 (GET 요청함)
+                  // GET 요청 시 query string으로 정보 전달하기
+                });
+            </script>
+
+
+
+            <div class="top">
+                <div class="num">번호</div>
+                <div class="title">제목</div>
+                <div class="name">작성자</div>
+                <div class="date">작성일</div>
+                <!-- <div class="count">조회</div> -->
+            </div>
+
+            
+
+            <% for(var i=0; i < posts.length; i++){ %>
+                <div class="container">
+                    <div class="num"><%= posts[i]._id %></div>
+                    <div class="title" data-id="<%= posts[i]._id %>"><%= posts[i].title %></div>
+                    <div class="name"><%= posts[i].nickname %></div>
+                    <div class="date"><%= posts[i].writtendate %></div>
+                </div>
+            <% } %>
+
+
+
+            <!-- <div>
+                <div class="num">1</div>    
+                <div class="title">
+                    <a href="view.html">HI! this is title</a>
+                </div>
+                <div class="name">작성자</div>
+                <div class="date">작성일</div>
+                <div class="count">조회</div>
+            </div> -->
+
+
+
+            <!-- <ul class="number">
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul> -->
+        </div>
+
+
+
+        <!--EJS는 HTML을 좀 더 쓰기 쉽게 도와주는 템플릿 엔진 라이브러리-->
+
+        <!-- <script> 태그를 통해 HTML에서 JavaScript를 작성할 수 있다 -->
+        <!-- jQuery 라이브러리
+        slim이 있는 jquery는 ajax와 같은 기능들을 사용할 수 없다 -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+        <script>
+        $('.title').click(function(e){
+            // 현재 페이지 url 바꾸는 법 (실은 GET 요청이랑 같다)
+            var postval = e.target.dataset.id;
+            window.location.replace('/view/' + postval);
+            // 버튼 누르면 /search로 이동함 (GET 요청함)
+            // GET 요청 시 query string으로 정보 전달하기
+        });
+        </script>
+
+
+
+        <div class="btnB">
+            <a href="/write"><button style="background:none; border:none; font-size:1em;">글쓰기</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/public/style.css">
+    <title>글조회 페이지</title>
+</head>
+<body>
+    <a href="/board"><img src="/public/solux_logo.jpg" alt="솔룩스 로고 이미지" width=350px></a>
+    <div class="menu_card">
+        <h5><a href=/mypage title="myPage">마이페이지</a></h5>
+        <h5><a href=/board title="community">커뮤니티</a></h5>
+        <h5><a href=/apply title="apply">지원서 작성</a></h5>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <br><h1><%= data.title %></h1>
+        </div>
+        <div class="card-view">
+            <div class="info">
+                <dl>
+                    <dt>작성자</dt>
+                    <dd><%= data.nickname %></dd>
+                </dl>
+                <dl>
+                    <dt>날짜</dt>
+                    <dd><%= data.writtendate %></dd>
+                </dl>
+                <!-- <dl>
+                    <dt>조회</dt>
+                    <dd>12회</dd>
+                </dl> -->
+            </div>
+            <div class="contents">
+                <%= data.writebody %>
+            </div>
+            <div class="btn">
+                <a href="/edit/<%= data._id %>"><button class="edit" data-id="<%= data._id %>" style="background:none; border:none; font-size:1em;">수정</button></a>
+            </div>
+            <div class="delete_btn">
+                <!-- <a onclick="alert('삭제되었습니다')"><button class="delete" data-id="<%= data._id %>">삭제</button></a> -->
+                <button class="delete" data-id="<%= data._id %>" style="background:none; border:none; font-size:1em;">삭제</button>
+            </div>
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+            <script>
+            // $('.title').click(function(e){
+            //     // 현재 페이지 url 바꾸는 법 (실은 GET 요청이랑 같다)
+            //     var postval = e.target.dataset.id;
+            //     window.location.replace('/view/' + postval);
+            //     // 버튼 누르면 /search로 이동함 (GET 요청함)
+            //     // GET 요청 시 query string으로 정보 전달하기
+            // });
+
+            $('.edit').click(function(e){
+                // 현재 페이지 url 바꾸는 법 (실은 GET 요청이랑 같다)
+                var postval = e.target.dataset.id;
+                window.location.replace('/edit/' + postval);
+                // 버튼 누르면 /search로 이동함 (GET 요청함)
+                // GET 요청 시 query string으로 정보 전달하기
+            });
+            
+            // 삭제 버튼을 누르면 서버에게 AJAX 요청을 하여 서버는 데이터를 삭제
+            $('.delete').click(function (e) {
+                // e.target : 자바스크립트에서 e라는 인자를 추가하여 누른 요소
+                // e.target = 지금 클릭한 것
+                // dataset.id : 누른 요소의 data-id(글 번호 postnum)
+                var postnum = e.target.dataset.id;
+                // this = 지금 이벤트 동작하는 곳
+                var pressed = $(this);
+
+                // AJAX : 서버랑 통신(GET, POST 요청 등)할 수 있게 도와주는 JS(자바스크립트) 문법
+                // 장점 : 새로고침 없이 서버에 요청하는 것을 도와줄 수 있다
+                // .done 함수를 통해 요청이 성공하면 function 함수를 실행
+                $.ajax({
+                // 서버에 어떤 경로('요청 경로')로 새로고침없이 DELETE 요청을 하는 명령
+                method: 'DELETE',
+                // 요청할 경로를 /delete로
+                url: '/delete',
+                // 요청 보낼 때 삭제할 게시물 번호 함께 전송
+                data: { _id: postnum } // 게시물 번호, 현재 클릭한 버튼의 id
+                }).done(function (result) {
+                //페이지를 강제로 새로고침해주세요
+                //삭제버튼을 누른 <li> 요소를 안보이게 하거나 제거해주세요
+                console.log('성공했습니다'); // 브라우저 콘솔창
+                pressed.parent('li').fadeOut(); // 요청이 성공하면 버튼이 fadeOut되도록 실행
+                }).fail(function (xhr, textStatus, errorThrown) {
+                // 요청이 실패 시 실행할 코드는 여기
+                console.log('실패했습니다');
+                console.log(xhr, textStatus, errorThrown);
+                });
+            });
+            // 서버에서는 /delete 경로로 DELETE 요청을 처리하는 코드를 작성해준다
+            </script>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

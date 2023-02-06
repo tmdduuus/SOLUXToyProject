@@ -1,0 +1,44 @@
+.signupdone{
+    width: 1000px;
+    height: 530px;
+    margin: 50px auto;
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+}
+
+
+.one{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.two{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.check{
+    margin-left: 38%;
+    margin-top: 20px;
+}
+
+.buttongroup{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.button{
+    background-color: rgba(130, 141, 241, 0.866);
+    color:#fffdfd;
+    font-size: 15px;
+    margin: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border:none;
+}
